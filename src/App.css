@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline {
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5;
+
+  font-family: "Josefin Slab";
+  color: #404040;
+}
+
+h2{
+  letter-spacing: 0.5vw;
+}
+
+h1 {
+  color: #1880FF;
+}
+
+p{
+  color: #FF7676;
+}
+
+
+.center {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.components {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+}
+
+.components {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  animation: shake 0.6s ease-in-out infinite;
+}
+
+/* Khi hover thì rung */
+.components:hover {
+  animation: none;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.tooltip-box {
+  background: white;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  animation: fadeIn 0.2s ease;
+}
+
+.tooltip-arrow {
+  fill: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+#sunflower {
+  left: 40%;
+  top: 50%;
+}
+
+#dahlia {
+  left: 38%;
+  top: 38%;
+}
+
+#lily {
+  left: 45%;
+  top: 35%;
+}
+
+#peony {
+  left: 52%;
+  top: 43%;
+}
+
+#letter {
+  left: 53%;
+  top: 69%;
+  rotate: calc(45deg);
+  animation: none;
+  cursor: pointer;
+}
+
+#letter:hover {
+  box-shadow: -10px 10px 30px rgba(210, 148, 14, 0.7);
+}
+
+.overlay {
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  inset: 0;
+}
+
+.modal {
+  background: rgba(40,40,40,0.8);
+  padding: 30px;
+  border-radius: 16px;
+  width: 72vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pop 0.3s ease;
+}
+
+.close {
+  margin-top: 20px;
+  background: pink;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-family: "Inter";
+  font-size: 20px;
+  color: #FF7676;
+}
+
+.modal-description {
+    color: #ffffff;
+  }
+
+.modal-content {
+  color: #FFF;
+}
+
+@keyframes pop {
+  from { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+
+#fooster {
+  width: 100%;
+  height: 20%;
+}
+
+@media only screen and (width <= 500px) {
+  #sunflower {
+    left: 20%;
+    top: 50%;
+  }
+
+  #dahlia {
+    left: 15%;
+    top: 42%;
+  }
+
+  #lily {
+    left: 30%;
+    top: 38%;
+  }
+
+  #peony {
+    left: 52%;
+    top: 43%;
+  }
+
+  #letter {
+    left: 61%;
+    top: 62%;
+  }
+
+  .headline {
+    height: 45%;
+  }
+
+  .center {
+    height: 35%;
+  }
+
+  .modal {
+    width: 80vw;
+  }
+
+  .modal-title {
+    font-family: "Inter";
+    font-size: 15px;
+    color: #FF7676;
+  }
+
+ .modal-description {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (width <= 500px) and (height > 720px) and (height <= 770px) {
+  #letter {
+    left: 61%;
+    top: 65%;
+  }
+}
+
+@media only screen and (width <= 500px) and (height > 670px) and (height <= 720px) {
+  #letter {
+    left: 61%;
+    top: 66%;
+  }
+}
+
+@media only screen and (width <= 500px) and (height <= 670px) {
+  #letter {
+    left: 67%;
+    top: 67%;
+  }
+}
