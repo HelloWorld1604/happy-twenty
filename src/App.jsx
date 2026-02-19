@@ -15,7 +15,7 @@ function App() {
           <h2>IT'S YOUR</h2>
           <h1>20TH</h1>
           <h2>BIRTHDAY!!!</h2>
-          <p>wish you all the best and happiness may come to you</p>
+          <p id="sub">wish you all the best and happiness may come to you</p>
           
 
         </div>
@@ -69,65 +69,85 @@ function App() {
                 </Dialog.Portal>
               </Dialog.Root>
 
-              <Tooltip.Provider>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Peony className="components" id="peony"/>
-                  </Tooltip.Trigger>
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <Peony className="components" id="peony"/>
+                </Dialog.Trigger>
 
-                  <Tooltip.Portal>
-                      <Tooltip.Content className="tooltip-box" side="top" sideOffset={8}>
-                        💐 Peony
-                      <Tooltip.Arrow className="tooltip-arrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
+                <Dialog.Portal>
+                  <Dialog.Overlay className="overlay" />
 
-              <Tooltip.Provider>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Lily className="components" id="lily"/>
-                  </Tooltip.Trigger>
+                  <Dialog.Content className="flower-modal">
+                    <Dialog.Title className="modal-title">💐 Peony</Dialog.Title>
+                    <br/>
+                    <Dialog.Description className="modal-description">
+                      It's also known to symbolise wealth. In Japan, it represents bravery, honour and good fortune.
+                    </Dialog.Description>
 
-                  <Tooltip.Portal>
-                      <Tooltip.Content className="tooltip-box" side="top" sideOffset={8}>
-                        🌚 Lily
-                      <Tooltip.Arrow className="tooltip-arrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
+                    <Dialog.Close className="close">Đóng</Dialog.Close>
+                  </Dialog.Content>
+                </Dialog.Portal>
+              </Dialog.Root>
 
-              <Tooltip.Provider>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Dahlia className="components" id="dahlia"/>
-                  </Tooltip.Trigger>
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <Lily className="components" id="lily"/>
+                </Dialog.Trigger>
 
-                  <Tooltip.Portal>
-                      <Tooltip.Content className="tooltip-box" side="top" sideOffset={8}>
-                        🌼🩷 Dahlia
-                      <Tooltip.Arrow className="tooltip-arrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
+                <Dialog.Portal>
+                  <Dialog.Overlay className="overlay" />
 
-              <Tooltip.Provider>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Sunflower className="components" id="sunflower"/>
-                  </Tooltip.Trigger>
+                  <Dialog.Content className="flower-modal">
+                    <Dialog.Title className="modal-title">🌚 Lily</Dialog.Title>
+                    <br/>
+                    <Dialog.Description className="modal-description">
+                      One of top 10 the most beautiful flower in the world ✨
+                    </Dialog.Description>
 
-                  <Tooltip.Portal>
-                      <Tooltip.Content className="tooltip-box" side="top" sideOffset={8}>
-                        🌻 Sunflower: cause you're the brightest sunshine
-                      <Tooltip.Arrow className="tooltip-arrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
+                    <Dialog.Close className="close">Đóng</Dialog.Close>
+                  </Dialog.Content>
+                </Dialog.Portal>
+              </Dialog.Root>
+
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <Dahlia className="components" id="dahlia"/>
+                </Dialog.Trigger>
+
+                <Dialog.Portal>
+                  <Dialog.Overlay className="overlay" />
+
+                  <Dialog.Content className="flower-modal">
+                    <Dialog.Title className="modal-title">🌼🩷 Dahlia</Dialog.Title>
+                    <br/>
+                    <Dialog.Description className="modal-description">
+                      Symbolise wisdom, beauty, love
+                    </Dialog.Description>
+
+                    <Dialog.Close className="close">Đóng</Dialog.Close>
+                  </Dialog.Content>
+                </Dialog.Portal>
+              </Dialog.Root>
+
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <Sunflower className="components" id="sunflower"/>
+                </Dialog.Trigger>
+
+                <Dialog.Portal>
+                  <Dialog.Overlay className="overlay" />
+
+                  <Dialog.Content className="flower-modal">
+                    <Dialog.Title className="modal-title">🌻 Sunflower</Dialog.Title>
+                    <br/>
+                    <Dialog.Description className="modal-description">
+                      Cause you're the brightest sunshine
+                    </Dialog.Description>
+
+                    <Dialog.Close className="close">Đóng</Dialog.Close>
+                  </Dialog.Content>
+                </Dialog.Portal>
+              </Dialog.Root>
         </div>
 
         <div id="fooster">

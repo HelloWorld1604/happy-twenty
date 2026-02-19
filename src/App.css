@@ -37,7 +37,7 @@ h1 {
   color: #1880FF;
 }
 
-p{
+#sub{
   color: #FF7676;
 }
 
@@ -172,6 +172,18 @@ p{
   color: #FFF;
 }
 
+.flower-modal {
+    background: rgba(40,40,40,0.8);
+    padding: 30px;
+    border-radius: 16px;
+    width: 30vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pop 0.3s ease;
+  }
+
 @keyframes pop {
   from { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
   to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
@@ -184,6 +196,10 @@ p{
 }
 
 @media only screen and (width <= 500px) {
+  #sub{
+    font-size: 10px;
+  }
+
   #sunflower {
     left: 20%;
     top: 50%;
@@ -217,7 +233,7 @@ p{
     height: 35%;
   }
 
-  .modal {
+  .modal, .flower-modal {
     width: 80vw;
   }
 
